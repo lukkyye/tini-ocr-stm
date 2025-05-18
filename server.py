@@ -16,16 +16,9 @@ def bytes_to_image(data: bytes)->cv2.typing.MatLike:
 
 app: Flask = Flask("Hola")
 
-Person: dict = {
-    "name": "" ,
-    "surname": "",
-    "id": "",
-    "card_id": ""
-}
-
-def get_ocr(img: cv2.typing.MatLike)->dict:
+def get_ocr(img: cv2.typing.MatLike)->dict | int:
     result: list = reader.readtext(img)[0:4]
-    person: dict | int = {}
+    person: dict = {}
     prelist: list = [j for i, j, k in result if k>=CONFIDENCE]
     try:
         person["name"]=prelist[1]
