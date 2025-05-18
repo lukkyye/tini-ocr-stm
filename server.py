@@ -6,7 +6,7 @@ import numpy as np
 
 #CONST
 CONFIDENCE=0.45
-
+URL_PATH="api"
 #bytes to MatLike
 def bytes_to_image(data: bytes)->cv2.typing.MatLike:
     nparr: np.ndarray = np.frombuffer(data, np.uint8)
@@ -40,7 +40,7 @@ def get_ocr(img: cv2.typing.MatLike)->dict:
         return 400
     return person
 
-@app.route("/api", methods=["POST"])
+@app.route(f"/{URL_PATH}", methods=["POST"])
 def index():
     json_data = request.get_json()
     if not json_data or 'data' not in json_data:
