@@ -5,8 +5,11 @@ You can use it with a video camera in real time (main.py), or modifying the path
 
 ## Example
 
-input:
-<img src="test.png">
+#### <p align="center">Input:</p>
+<p align="center">
+<img src="test.png" width=350px>
+</p>
 
-output:
-> {'name': 'JUAN IGNACIO', 'surname': 'PÉREZ GONZÁLEZ', 'id': '5.859.396-8', 'card_code': 'A0B2M52'}
+
+#### Output:
+>{'name': 'JUAN IGNACIO', 'surname': 'PÉREZ GONZÁLEZ', 'id': '5.859.396-8', 'card_code': 'A0B2M52'}
