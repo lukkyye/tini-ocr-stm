@@ -19,7 +19,7 @@ def ResizeWithAspectRatio(image, width=None, height=None, inter=cv2.INTER_AREA):
 
 reader = ocr.Reader(["es"], gpu=True)
 
-frame = cv2.imread("IMAGE-DIR", cv2.IMREAD_COLOR_RGB)
+frame = cv2.imread("/home/lukkyye/Desktop/Programming/Python/tini-ocr-stm/test.png", cv2.IMREAD_COLOR_RGB)
 frame = ResizeWithAspectRatio(frame, 640)
 
 
